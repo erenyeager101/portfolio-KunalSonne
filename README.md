@@ -3,8 +3,7 @@
 
 This repository contains the code for a **stunning portfolio website** built using **React JS**. It showcases animations created with **framer-motion** and has a beautiful, responsive design using **styled-components**. The website includes various sections to display your projects, skills, and contact information.
 
-![GitHub stars](https://img.shields.io/github/stars/erenyeager101/react-portfolio?style=social&label=Stars)&nbsp;&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/erenyeager101/react-portfolio?style=social&label=Forks)&nbsp;&nbsp;
+
 ![Github Followers](https://img.shields.io/github/followers/erenyeager101?style=social&label=Followers)&nbsp;&nbsp;<br />
 
 ## 📂 Project Overview
