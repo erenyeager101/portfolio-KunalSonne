@@ -1,115 +1,99 @@
-# Build a Stunning Portfolio with React JS using Styled-Components and framer-motion for awesome Animations
 
-![GitHub stars](https://img.shields.io/github/stars/codebucks27/react-portfolio-final?style=social&logo=ApacheSpark&label=Stars&maxAge=2592000)&nbsp;&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/codebucks27/react-portfolio-final?style=social&logo=KashFlow)&nbsp;&nbsp;
-![Github Followers](https://img.shields.io/github/followers/codebucks27.svg?style=social&label=Follow&maxAge=2592000)&nbsp;&nbsp;<br />
+# React Portfolio Website
 
-This repository contains Final code for The Portfolio Website in ReactJS. <br />
+This repository contains the code for a **stunning portfolio website** built using **React JS**. It showcases animations created with **framer-motion** and has a beautiful, responsive design using **styled-components**. The website includes various sections to display your projects, skills, and contact information.
 
-For the **Demo** and **Final Code** checkout this link👇: <br />
-<a href="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion#overview" target="_blank">Checkout this Responsive Portfolio in ReactJS</a> <br />
+![GitHub stars](https://img.shields.io/github/stars/erenyeager101/react-portfolio?style=social&label=Stars)&nbsp;&nbsp;
+![GitHub forks](https://img.shields.io/github/forks/erenyeager101/react-portfolio?style=social&label=Forks)&nbsp;&nbsp;
+![Github Followers](https://img.shields.io/github/followers/erenyeager101?style=social&label=Followers)&nbsp;&nbsp;<br />
 
-If you want to learn how to create it please follow below tutorial👇: <br />
-https://youtu.be/jcohAIaSy2M <br />
-[![YouTube Video Views](https://img.shields.io/youtube/views/jcohAIaSy2M?style=social)](https://youtu.be/jcohAIaSy2M)<br />
+## 📂 Project Overview
 
-[⚠⚠⚠ If you want full code of this website then you can get it from here👇: <br />]::
+This portfolio is built with **React** and features the following key aspects:
 
-You'll get code files which contans code for responsive portfolio website with
-all the animations showed in the demo.
-Also, I have used React Lazy loading to increase loading speed.
+- **Styled-Components** for modern and customizable styles.
+- **Framer Motion** for smooth and eye-catching animations.
+- Responsive design for mobile, tablet, and desktop devices.
+- **React Router** for navigation between different pages.
+- Lazy loading for faster page performance.
 
-I have recently updated all the required dependencies for React Portfolio Website.
-You might see some differences in implementation such as,
+## 🛠️ Technologies Used
 
-- In implementing react-router
+- **React JS**
+- **Styled-Components**
+- **Framer Motion**
+- **React Router**
+- **React-TSParticles** for interactive backgrounds
+- **React Icons** for beautiful icons
 
-- I have removed react-particles-js since it has been deprecated and used react-tsparticles instead, you can see it's implementation in ParticlesComponent.js file.
+## 🚀 Features
 
-- In the index.js file we are no longer using ReactDOM since we can use createRoot in React 18.
+- **Responsive Layout**: Optimized for different screen sizes.
+- **Smooth Animations**: Using `framer-motion` to create smooth transitions and interactions.
+- **Lazy Loading**: Load components only when needed to improve performance.
+- **Particle Background**: Interactive and customizable particle animations.
+- **Dark and Light Mode**: Switch between themes effortlessly.
+  
+## 📷 Screenshots
 
-### Images of The Portfolio Website:
+### 1. **Home Page**
+![Home Page](https://github.com/erenyeager101/React-Portfolio-Images/blob/main/Home.png)
 
-![HOME](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Home.png)
-![Intro](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Intro.png)
-![Blog](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Blog.png)
-![Home Mobile](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Home-Mobile.png)
-![Intro Mobile](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Intro-Mobile.png)
-![Intro Blog](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Blog-Mobile.png)
+### 2. **Intro Page**
+![Intro Page](https://github.com/erenyeager101/React-Portfolio-Images/blob/main/Intro.png)
 
-### Resources Used in This Project
+### 3. **Blog Page**
+![Blog Page](https://github.com/erenyeager101/React-Portfolio-Images/blob/main/Blog.png)
 
-Design in : https://www.figma.com/ <br />
-Svg Icons from :https://fontawesome.com/ <br />
-Spaceman 3D Image from : https://www.figma.com/community/plugin/769588393361258724/Vectary-3D-Elements <br />
-Audio: Music by <a href="https://pixabay.com/users/itswatr-12344345/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=1167">Jonas</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=1167">Pixabay</a> <br />
-Background Photo by <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Tomasso</a> on <a href="https://unsplash.com/s/photos/news-paper?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+### 4. **Mobile View - Home Page**
+![Mobile Home Page](https://github.com/erenyeager101/React-Portfolio-Images/blob/main/Home-Mobile.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🛠️ Installation Guide
 
-## Available Scripts
+1. Clone the repository:
 
-In the project directory, you can run:
+    ```bash
+    git clone https://github.com/erenyeager101/react-portfolio.git
+    ```
 
-### `npm start`
+2. Navigate into the project directory:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    ```bash
+    cd react-portfolio
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. Install the dependencies:
 
-### `npm test`
+    ```bash
+    npm install
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Run the development server:
 
-### `npm run build`
+    ```bash
+    npm start
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📜 Available Scripts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In the project directory, you can run the following scripts:
 
-### `npm run eject`
+- **`npm start`**: Runs the app in development mode.
+- **`npm test`**: Launches the test runner.
+- **`npm run build`**: Builds the app for production.
+- **`npm run eject`**: Ejects the configuration files.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📄 License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📧 Contact
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you have any questions, feel free to reach out to me at:
 
-## Learn More
+- **Email**: sonnekunal2@gmail.com
+- **GitHub**: [erenyeager101](https://github.com/erenyeager101)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to **star** the repository if you like it and **fork** it if you want to build your own version! 😊
