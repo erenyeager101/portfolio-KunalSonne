@@ -81,8 +81,8 @@ const Intro = () => {
       <SubBox>
         <Text>
           <h1>Hello There!</h1>
-          <h3>I'm Kunal</h3>
-          <h6>Passionate about building aesthetic and functional web experiences.</h6>
+          <h3>Hi, I'm Kunal Sonne 👋</h3>
+          <h6>I’m a passionate tech enthusiast and B.Tech student at VIT Pune, specializing in Computer Science. With a keen interest in Machine Learning, Artificial Intelligence, and Web Development, I strive to create innovative solutions that bridge the gap between technology and real-world applications.</h6>
         </Text>
       </SubBox>
       <SubBox>
