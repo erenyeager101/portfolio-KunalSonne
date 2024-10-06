@@ -39,7 +39,7 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://github.com/sudhakar2905"}
+          href={"https://github.com/erenyeager101"}
         >
           <Github
             width={25}
@@ -56,7 +56,7 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://leetcode.com/u/sudhakarshinde2905/"}
+          href={"https://leetcode.com/u/sonnekunal2/"}
         >
           <Twitter
             width={25}
@@ -73,8 +73,8 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://www.instagram.com/kakarot._.kun/"}
-        >
+          href={"https://www.instagram.com/"}
+        
           <Facebook
             width={25}
             height={25}
@@ -90,7 +90,7 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://www.linkedin.com/in/sudhakarshinde2905/"}
+          href={"https://www.linkedin.com/in/kunal-sonne-719748322/"}
         >
           <YouTube
             width={25}
