@@ -72,9 +72,9 @@ const AboutPage = () => {
             {/* <img src={astronaut} alt="spaceman" /> */}
         </Spaceman>    
         <Main>
-        I'm a Competetive Programmer and a Student living in India. I love to solve DSA problems and compete in coding contest and also intrest in developing games with great user experience.
+        I'm a Student and an Aspiring Web developer thrivings to solve complex real world problem using my technical skills. I also love to solve DSA problems and compete in coding contest and also intrest in Machine Learning , Web3 and Artifical Intelligence.
 <br /> <br/>
-I'm interested in the solving DSA problems on Lettcode and CodeChef. I'm an second Year Undergraduate Student at VIT Pune. I love create games in Unity game Engine.
+I'm interested in the solving DSA problems on Lettcode and CodeChef. I'm an second Year Undergraduate Student at VIT Pune. I have created and demonstated many projects in various hackathons , Ideathons etc and i love to participate in technical events.
 <br/> <br/>
 i Always seek for further learning and applying skills to solve real world problems. You can connect with me via social links.
         </Main>
