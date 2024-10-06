@@ -93,7 +93,7 @@ const MySkillsPage = () => {
 <ParticleComponent theme='light' />
             <Main>
 <Title>
-    <Design width={40} height={40} /> Competetive Programmer
+    <Design width={40} height={40} /> Coder / Programmer
 </Title>
 <Description>
 I love to solve complex data structures based quaestions on various coding platforms like leetcode , codechef.
@@ -122,15 +122,15 @@ I love to solve complex data structures based quaestions on various coding platf
             </Main>
             <Main>
 <Title>
-    <Develope width={40} height={40} /> Unity Game Developer
+    <Develope width={40} height={40} /> Web Developer
 </Title>
 <Description>
-I love to develop complex yet simple and user friendly games.
+I love to create user friendly and scalable websites to solve real world problems.
 </Description>
 <Description>
 <strong>Tools</strong>
 <p>
-Unity, C#, UnReal Engine 
+ReactJS, NodeJS, Django 
 </p>
 </Description>
 <Description>
