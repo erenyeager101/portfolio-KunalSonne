@@ -23,7 +23,13 @@ h2,h3,h4,h5,h6{
   font-weight:500;
 }
 `
-
+const Heading = styled.h1`
+  font-size: 2.5rem; /* Adjust the font size */
+  font-weight: bold; /* Make the font bold */
+  color: #000; /* Choose a color */
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Align text to the left */
+`;
 const Container = styled.div`
 padding: 2rem;
 `
@@ -45,7 +51,12 @@ transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
 z-index:1;
 `
-
+const Paragraph = styled.p`
+  font-size: 1.25rem; /* Adjust the font size */
+  color: #333; /* Choose a color */
+  line-height: 1.5; /* Adjust line height for readability */
+  margin: 0.5rem 0; /* Adjust margin */
+`;
 const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 
@@ -113,6 +124,32 @@ transition: all 1s ease;
     padding-top: 1rem;
 }
 `
+const Left = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 30%; /* Adjust as needed for positioning */
+  transform: translate(-50%, -50%);
+  width: 30%; /* Adjust width as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the left */
+  transition: all 1s ease;
+  
+`;
+
+const Right = styled.div`
+  position: absolute;
+  top: 35%;
+  right: 26%; /* Adjust as needed for positioning */
+  transform: translate(50%, -50%);
+  width: 30%; /* Adjust width as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; /* Align items to the right */
+  transition: all 1s ease;
+`;
 
 const DarkDiv = styled.div`
 position: absolute;
@@ -235,6 +272,20 @@ const Main = () => {
 
             </Container>
             {click ? <Intro click={click} /> : null }
+
+            <Right>
+             <h1>
+             <p>ᴡᴇʟᴄᴏᴍᴇ ᴛo</p>ᴍʏ ᴘᴏʀᴛꜰᴏʟɪᴏ
+             </h1>
+            </Right>
+
+            <Left>
+            <Heading>Turning Vision Into Reality With Code And Design.</Heading>
+        <Paragraph>
+          As a passionate and aspiring web developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.
+        </Paragraph>
+
+            </Left>
         </MainContainer>
     )
 }
