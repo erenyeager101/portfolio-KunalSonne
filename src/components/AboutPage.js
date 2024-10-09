@@ -70,7 +70,7 @@ const AboutPage = () => {
 
         <Spaceman>
              <a href="https://drive.google.com/file/d/1EuF3XHPnGk_zSoKgCbG_54GURbySjxbB/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-    <img src={astronaut} alt="spaceman" style={{ cursor: 'pointer' }} />
+    <img src={astronaut} alt="spaceman2" style={{ cursor: 'pointer' }} />
   </a>
         </Spaceman>    
         <Main>
