@@ -69,7 +69,9 @@ const AboutPage = () => {
 <ParticleComponent theme='dark' />
 
         <Spaceman>
-            {/* <img src={astronaut} alt="spaceman" /> */}
+             <a href="https://drive.google.com/file/d/1EuF3XHPnGk_zSoKgCbG_54GURbySjxbB/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <img src={astronaut} alt="spaceman" style={{ cursor: 'pointer' }} />
+  </a>
         </Spaceman>    
         <Main>
         I'm a Student and an Aspiring Web developer thrivings to solve complex real world problem using my technical skills. I also love to solve DSA problems and compete in coding contest and also intrest in Machine Learning , Web3 and Artifical Intelligence.
