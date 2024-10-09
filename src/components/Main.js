@@ -105,7 +105,7 @@ align-items: center;
 transition: all 1s ease;
 
 &>:first-child{
-    animation: ${rotate} infinite 1.5s linear;
+    animation: ${rotate} infinite 1s linear;
 }
 
 &>:last-child{
