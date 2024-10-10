@@ -24,12 +24,40 @@ h2,h3,h4,h5,h6{
 }
 `
 const Heading = styled.h1`
-  font-size: 2.5rem; /* Adjust the font size */
-  font-weight: bold; /* Make the font bold */
-  color: #000; /* Choose a color */
-  margin: 0; /* Remove default margin */
-  text-align: left; /* Align text to the left */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem; /* Reduce font size for mobile */
+    text-align: center; /* Center text on mobile */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem; /* Further reduce font size for smaller devices */
+  }
 `;
+
+const Paragraph = styled.p`
+  font-size: 1.25rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1rem; /* Adjust font size for mobile */
+    text-align: center; /* Center text on mobile */
+    line-height: 1.3; /* Adjust line height for readability on smaller screens */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem; /* Smaller font size for smaller screens */
+    margin: 0.25rem 0; /* Adjust margins for smaller devices */
+  }
+`;
+
 const Container = styled.div`
 padding: 2rem;
 `
@@ -51,12 +79,7 @@ transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
 z-index:1;
 `
-const Paragraph = styled.p`
-  font-size: 1.25rem; /* Adjust the font size */
-  color: #333; /* Choose a color */
-  line-height: 1.5; /* Adjust line height for readability */
-  margin: 0.5rem 0; /* Adjust margin */
-`;
+
 const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 
