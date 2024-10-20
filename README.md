@@ -1,7 +1,7 @@
 
-# React Portfolio Website
+# Kunal Sonne - React Portfolio Website
 
-This repository contains the code for a **stunning portfolio website** built using **React JS**. It showcases animations created with **framer-motion** and has a beautiful, responsive design using **styled-components**. The website includes various sections to display your projects, skills, and contact information.
+This repository contains the code for my **Portfolio website** built using **React JS**. It showcases animations created with **framer-motion** and has a beautiful, responsive design using **styled-components**. The website includes various sections to display your projects, skills, and contact information.
 
 
 ![Github Followers](https://img.shields.io/github/followers/erenyeager101?style=social&label=Followers)&nbsp;&nbsp;<br />
@@ -33,19 +33,6 @@ This portfolio is built with **React** and features the following key aspects:
 - **Particle Background**: Interactive and customizable particle animations.
 - **Dark and Light Mode**: Switch between themes effortlessly.
   
-## 📷 Screenshots
-
-### 1. **Home Page**
-![Home Page](https://github.com/erenyeager101/React-Portfolio-Images/blob/main/Home.png)
-
-### 2. **Intro Page**
-![Intro Page](https://github.com/erenyeager101/React-Portfolio-Images/blob/main/Intro.png)
-
-### 3. **Blog Page**
-![Blog Page](https://github.com/erenyeager101/React-Portfolio-Images/blob/main/Blog.png)
-
-### 4. **Mobile View - Home Page**
-![Mobile Home Page](https://github.com/erenyeager101/React-Portfolio-Images/blob/main/Home-Mobile.png)
 
 ## 🛠️ Installation Guide
 
@@ -84,9 +71,7 @@ In the project directory, you can run the following scripts:
 - **`npm run build`**: Builds the app for production.
 - **`npm run eject`**: Ejects the configuration files.
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📧 Contact
 
