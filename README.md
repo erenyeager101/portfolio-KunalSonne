@@ -1,5 +1,5 @@
 
-# Kunal Sonne - React Portfolio Website
+# Kunal Sonne..
 
 This repository contains the code for my **Portfolio website** built using **React JS**. It showcases animations created with **framer-motion** and has a beautiful, responsive design using **styled-components**. The website includes various sections to display your projects, skills, and contact information.
 
