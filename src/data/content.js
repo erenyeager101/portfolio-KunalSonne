@@ -54,23 +54,23 @@ export const skills = {
       items: ['Realtime telemetry dashboards', 'WebSocket & REST API design', 'Computer vision pipelines', 'Agile delivery & documentation']
     }
   ],
-stats: [
-  {
-    label: 'Professional internships',
-    value: '2',
-    helper: 'at Addverb Technologies & e-Yantra, IIT Bombay'
-  },
-  {
-    label: 'relevant experience in improving system performance',
-    value: 'nearly 25%',
-    helper: 'via optimized data caching and WebSocket-based live updates'
-  },
-  {
-    label: 'Hackathon podiums',
-    value: '3',
-    helper: 'including IIT Bombay EYIC & Hackspiration Web3 track'
-  }
-]
+  stats: [
+    {
+      label: 'Professional internships',
+      value: '2',
+      helper: 'Hands-on at Addverb Technologies and e-Yantra, IIT Bombay'
+    },
+    {
+      label: 'Latency reduction delivered',
+      value: '25%',
+      helper: 'Optimised caching and WebSocket updates for live dashboards'
+    },
+    {
+      label: 'Hackathon podiums',
+      value: '3',
+      helper: 'Including IIT Bombay EYIC and Hackspiration Web3 track'
+    }
+  ]
 
 };
 

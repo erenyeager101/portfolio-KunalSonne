@@ -7,7 +7,7 @@ function Footer({ socialLinks = [] }) {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-brand">Let’s build the future</p>
           <p className="mt-2 text-base text-slate-600 dark:text-slate-300">
-            Crafted with React, Tailwind CSS, and Framer Motion. Deployed to run fast anywhere.
+            Designed and engineered by me with polish, performance, and recruiter-friendly storytelling in mind.
           </p>
         </div>
         <div className="flex items-center gap-3">

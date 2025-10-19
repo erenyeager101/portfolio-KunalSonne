@@ -1,16 +1,61 @@
-import { motion } from 'framer-motion';
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
+import { useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { getIconComponent } from '../utils/iconMap.js';
 
 function HeroSection({ data, socialLinks = [], resumeUrl }) {
   const Icon = getIconComponent('FileDown');
+  const pointerX = useMotionValue(0);
+  const pointerY = useMotionValue(0);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    pointerX.set(window.innerWidth / 2);
+    pointerY.set(window.innerHeight / 2);
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const handlePointerMove = (event) => {
+      pointerX.set(event.clientX);
+      pointerY.set(event.clientY + window.scrollY);
+    };
+
+    window.addEventListener('pointermove', handlePointerMove, { passive: true });
+    return () => window.removeEventListener('pointermove', handlePointerMove);
+  }, [pointerX, pointerY]);
+
+  const spotlight = useMotionTemplate`radial-gradient(650px circle at ${pointerX}px ${pointerY}px, rgba(37, 99, 235, 0.18), transparent 60%)`;
 
   return (
     <section id="about" className="scroll-mt-safe">
       <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/95 p-8 shadow-glow backdrop-blur dark:border-white/10 dark:bg-slate-950/85 sm:p-12">
-        <div className="pointer-events-none absolute inset-0 -z-20 bg-gradient-to-br from-brand/30 via-transparent to-accent/30 opacity-80 blur-3xl" />
-        <div className="pointer-events-none absolute -top-24 -left-24 -z-10 h-56 w-56 rounded-full bg-brand/25 blur-[120px]" />
-        <div className="pointer-events-none absolute -bottom-28 -right-32 -z-10 h-72 w-72 rounded-full bg-accent/20 blur-[140px]" />
+        <motion.div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-20"
+          style={{ background: spotlight }}
+        />
+        <motion.div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-30 bg-gradient-to-br from-brand/30 via-transparent to-accent/30 opacity-80 blur-3xl"
+          animate={{ opacity: [0.6, 0.85, 0.6] }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-24 -left-24 -z-10 h-56 w-56 rounded-full bg-brand/25 blur-[120px]"
+          animate={{ y: [0, -10, 0], x: [0, 12, 0] }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-28 -right-32 -z-10 h-72 w-72 rounded-full bg-accent/20 blur-[140px]"
+          animate={{ y: [0, 18, 0], x: [0, -14, 0] }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+        />
 
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div className="space-y-6">
@@ -25,10 +70,17 @@ function HeroSection({ data, socialLinks = [], resumeUrl }) {
                 {data.name}
               </h1>
               <div className="flex flex-wrap gap-2 text-sm font-medium uppercase tracking-[0.35em] text-brand">
-                {data.roles?.map((role) => (
-                  <span key={role} className="rounded-full bg-brand/10 px-3 py-1 text-[0.68rem] text-brand">
+                {data.roles?.map((role, roleIndex) => (
+                  <motion.span
+                    key={role}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 * roleIndex, duration: 0.5, ease: 'easeOut' }}
+                    whileHover={{ y: -2, scale: 1.02 }}
+                    className="rounded-full bg-brand/10 px-3 py-1 text-[0.68rem] text-brand dark:bg-brand/15"
+                  >
                     {role}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
               <p className="text-base text-slate-600 dark:text-slate-300 sm:text-lg">
@@ -42,7 +94,7 @@ function HeroSection({ data, socialLinks = [], resumeUrl }) {
               </div>
             </motion.div>
 
-            <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4">
               {resumeUrl && (
                 <a
                   href={resumeUrl}

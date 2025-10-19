@@ -10,8 +10,8 @@ function ResearchSection({ items = [] }) {
       <div className="space-y-12">
         <SectionHeading
           eyebrow="Research"
-          title="Exploring immersive therapy and automation"
-          description="I routinely translate project learnings into documented insights—fueling papers, talks, and open exploration."
+          title="Exploring ML and how it can assist in immersive therapy and automation"
+          description="I routinely translate project learnings into documented insights—fueling papers, have published couple of articles in conferences too."
         />
 
         <div className="grid gap-6">

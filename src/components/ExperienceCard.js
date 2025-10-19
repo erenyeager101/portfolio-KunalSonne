@@ -12,7 +12,7 @@ function ExperienceCard({ item, index }) {
       transition={{ duration: 0.6, delay: index * 0.08, ease: 'easeOut' }}
       className="relative ml-10 overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 p-7 shadow-lg transition hover:-translate-y-1 hover:border-brand hover:shadow-glow dark:border-white/10 dark:bg-slate-950/80"
     >
-      <span className="absolute -left-10 top-8 flex h-10 w-10 items-center justify-center rounded-full border-2 border-brand bg-white text-brand shadow-lg shadow-brand/30 dark:bg-slate-950">
+      <span className="absolute -left-10 top-8 flex h-10 w-10 items-center justify-center rounded-full border-2 border-brand bg-white text-brand shadow-[0_18px_36px_-18px_rgba(37,99,235,0.55)] dark:bg-slate-950">
         <Briefcase className="h-5 w-5" />
       </span>
       <span className="absolute inset-x-6 top-0 h-1 rounded-full bg-gradient-to-r from-brand via-brand-light to-accent" aria-hidden="true" />

@@ -9,17 +9,22 @@ function ProjectCard({ project, index }) {
 
   return (
     <motion.article
+      layout
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, delay: index * 0.05, ease: 'easeOut' }}
-      whileHover={{ y: -12 }}
-      className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 shadow-lg transition dark:border-white/10 dark:bg-slate-950/80"
+      whileHover={{ y: -14, rotateX: 1.5, rotateY: -1 }}
+      style={{ transformPerspective: 1000 }}
+      className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 shadow-lg transition-transform duration-300 dark:border-white/10 dark:bg-slate-950/80"
     >
       <div className="relative overflow-hidden border-b border-slate-200/70 bg-gradient-to-br from-brand/20 via-transparent to-accent/20 p-6 dark:border-white/10 dark:from-brand/30 dark:to-accent/30">
-        <div className="absolute inset-0 -z-10 opacity-40 blur-3xl transition duration-500 group-hover:opacity-70 group-hover:blur-2xl">
-          <div className="absolute inset-0 bg-gradient-to-br from-brand/40 via-transparent to-accent/50" />
-        </div>
+        <motion.div
+          className="absolute inset-0 -z-10 opacity-50 blur-3xl"
+          animate={{ backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'] }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'linear' }}
+          style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(37,99,235,0.4), transparent 45%), radial-gradient(circle at 80% 30%, rgba(249,115,22,0.35), transparent 45%)' }}
+        />
         <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.35em] text-brand">
           {tags?.map((tag) => (
             <span key={tag} className="rounded-full bg-white/40 px-3 py-1 text-[0.65rem] font-medium text-brand dark:bg-white/10 dark:text-brand-light">
