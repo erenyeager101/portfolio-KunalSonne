@@ -74,11 +74,11 @@ const AboutPage = () => {
   </a>
         </Spaceman>    
         <Main>
-        I'm a Student and an Aspiring Web developer thrivings to solve complex real world problem using my technical skills. I also love to solve DSA problems and compete in coding contest and also intrest in Machine Learning , Web3 and Artifical Intelligence.
+        I'm a Student and an Aspiring Web developer thriving to solve complex real world problem using my technical skills. I also have keen interest in Machine Learning , Web3 and Artifical Intelligence.
 <br /> <br/>
-I'm interested in the solving DSA problems on Lettcode. As a second Year Undergraduate Student at VIT Pune ,i have created and demonstated many projects in various hackathons and i love to participate in technical events.
+I'm interested in the solving DSA problems on various platform. As a third Year Undergraduate Student at VIT Pune ,i have created and demonstated many projects in various hackathons and i love to participate in technical events.
 <br/> <br/>
-i Always seek for further learning and applying skills to solve real world problems.
+I always seek for further learning and applying skills to solve real world problems.
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />

@@ -9,7 +9,7 @@ function ProjectsSection({ items = [] }) {
       <div className="space-y-12">
         <SectionHeading
           eyebrow="Projects"
-          title="Flagship products and experiments"
+          title="My Projects"
           description="A snapshot of platforms bridging robotics, XR, and analytics. Each one blends pragmatic delivery with thoughtful human experiences."
         />
 

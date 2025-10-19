@@ -1,14 +1,14 @@
 export const hero = {
   greeting: 'Hi, I’m',
   name: 'Kunal Sonne',
-  roles: ['Full-stack Engineer', 'Robotics Software Intern', 'XR/ML Builder'],
+  roles: ['Full-stack Engineer', 'Software Developer', 'XR & ML Builder'],
   summary:
     'I build resilient automation platforms and immersive experiences that help teams monitor, learn, and move faster. From robotics fleet dashboards to VR therapy tools, my work blends thoughtful UX with reliable engineering.',
   highlight:
     'Currently refining XRise, a VR therapy platform for neurodiverse learners, while scaling industrial fleet-management tooling at Addverb.',
   location: 'Pune, India',
-  availability: 'Open to summer 2026 internship opportunities and collaborative research.',
-  metrics: [
+  availability: 'Open to summer 2026/27 internship opportunities and collaborative research.',
+  metrics: [ 
     { label: 'Production features shipped', value: '30+' },
     { label: 'Realtime latency reduction', value: '25%' },
     { label: 'Algorithm problems solved', value: '500+' }
@@ -39,7 +39,7 @@ export const skills = {
   categories: [
     {
       title: 'Core Languages',
-      items: ['C/C++', 'JavaScript (ES2023)', 'Python', 'SQL']
+      items: ['C/C++', 'JavaScript', 'Python', 'SQL']
     },
     {
       title: 'Frameworks & Runtime',
@@ -54,23 +54,24 @@ export const skills = {
       items: ['Realtime telemetry dashboards', 'WebSocket & REST API design', 'Computer vision pipelines', 'Agile delivery & documentation']
     }
   ],
-  stats: [
-    {
-      label: 'FMS dashboards delivered',
-      value: '12',
-      helper: 'production-grade views serving live robotics operations'
-    },
-    {
-      label: 'Latency improvement',
-      value: '25%',
-      helper: 'achieved with Redis caching and WebSocket messaging'
-    },
-    {
-      label: 'Hackathon podiums',
-      value: '3',
-      helper: 'including IIT Bombay EYIC & Hackspiration Web3 track'
-    }
-  ]
+stats: [
+  {
+    label: 'Professional internships',
+    value: '2',
+    helper: 'at Addverb Technologies & e-Yantra, IIT Bombay'
+  },
+  {
+    label: 'relevant experience in improving system performance',
+    value: 'nearly 25%',
+    helper: 'via optimized data caching and WebSocket-based live updates'
+  },
+  {
+    label: 'Hackathon podiums',
+    value: '3',
+    helper: 'including IIT Bombay EYIC & Hackspiration Web3 track'
+  }
+]
+
 };
 
 export const experiences = [
@@ -162,8 +163,8 @@ export const research = [
     title: 'XRise Assistive Therapy Study',
     description:
       'Measuring engagement, cognitive response, and motor improvements from adaptive VR therapy sessions for neurodiverse children.',
-    venue: 'In preparation for submission to AIP Conference Proceedings',
-    status: 'Writing draft & collecting longitudinal data.',
+    venue: 'In preparation for delivering more impact and collaborations.',
+    status: 'Researching more & collecting longitudinal data.',
     link: null
   }
 ];
