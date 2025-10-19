@@ -7,8 +7,10 @@ function HeroSection({ data, socialLinks = [], resumeUrl }) {
 
   return (
     <section id="about" className="scroll-mt-safe">
-      <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 p-8 shadow-glow backdrop-blur dark:border-white/10 dark:bg-slate-950/80 sm:p-12">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-brand/20 via-transparent to-accent/20 opacity-60 blur-3xl" />
+      <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/95 p-8 shadow-glow backdrop-blur dark:border-white/10 dark:bg-slate-950/85 sm:p-12">
+        <div className="pointer-events-none absolute inset-0 -z-20 bg-gradient-to-br from-brand/30 via-transparent to-accent/30 opacity-80 blur-3xl" />
+        <div className="pointer-events-none absolute -top-24 -left-24 -z-10 h-56 w-56 rounded-full bg-brand/25 blur-[120px]" />
+        <div className="pointer-events-none absolute -bottom-28 -right-32 -z-10 h-72 w-72 rounded-full bg-accent/20 blur-[140px]" />
 
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div className="space-y-6">
@@ -32,7 +34,10 @@ function HeroSection({ data, socialLinks = [], resumeUrl }) {
               <p className="text-base text-slate-600 dark:text-slate-300 sm:text-lg">
                 {data.summary}
               </p>
-              <div className="rounded-2xl border border-brand/20 bg-brand/5 p-4 text-sm text-brand dark:border-brand/30 dark:bg-brand/10">
+              <div className="flex flex-col gap-3 rounded-3xl border border-brand/20 bg-gradient-to-br from-brand/10 via-white to-white p-5 text-sm text-brand shadow-inner dark:border-brand/30 dark:from-brand/15 dark:via-slate-950 dark:to-slate-950/80">
+                <span className="inline-flex w-max rounded-full bg-white/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-brand/80 dark:bg-white/10 dark:text-brand-light">
+                  In focus
+                </span>
                 {data.highlight}
               </div>
             </motion.div>
@@ -75,7 +80,8 @@ function HeroSection({ data, socialLinks = [], resumeUrl }) {
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
             className="relative"
           >
-            <div className="relative rounded-3xl border border-slate-200/60 bg-white/80 p-6 shadow-glow backdrop-blur dark:border-white/10 dark:bg-slate-900/70">
+            <div className="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-white/85 p-6 shadow-glow backdrop-blur dark:border-white/10 dark:bg-slate-900/70">
+              <span className="pointer-events-none absolute -right-28 top-6 h-48 w-48 rounded-full bg-brand/25 blur-[120px]" />
               <div className="space-y-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.35em] text-brand">Based in</p>
@@ -86,19 +92,25 @@ function HeroSection({ data, socialLinks = [], resumeUrl }) {
                   <p className="text-sm text-slate-600 dark:text-slate-300">{data.availability}</p>
                 </div>
                 <div className="space-y-3">
-                  {data.metrics?.map((metric) => (
-                    <div
+                  {data.metrics?.map((metric, metricIndex) => (
+                    <motion.div
                       key={metric.label}
-                      className="flex items-baseline justify-between rounded-2xl bg-slate-100/80 p-3 text-slate-600 dark:bg-white/5 dark:text-slate-300"
+                      initial={{ opacity: 0, x: 24 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, amount: 0.5 }}
+                      transition={{ duration: 0.45, delay: metricIndex * 0.05, ease: 'easeOut' }}
+                      className="flex items-baseline justify-between rounded-2xl bg-slate-100/80 px-4 py-3 text-slate-600 dark:bg-white/5 dark:text-slate-300"
                     >
-                      <span className="text-sm font-medium uppercase tracking-[0.2em]">{metric.label}</span>
+                      <span className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500 dark:text-slate-400">
+                        {metric.label}
+                      </span>
                       <span className="text-xl font-semibold text-slate-900 dark:text-white">{metric.value}</span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-6 rounded-2xl border border-brand/30 bg-brand/10 p-4 text-sm text-brand dark:border-brand/40 dark:bg-brand/15 dark:text-brand-light">
+              <div className="mt-6 rounded-2xl border border-brand/30 bg-brand/10 p-4 text-sm text-brand dark:border-brand/40 dark:bg-brand/20 dark:text-brand-light">
                 <div className="flex items-center justify-between gap-2">
                   <p className="font-semibold uppercase tracking-[0.3em]">Let’s collaborate</p>
                   <ArrowUpRight className="h-4 w-4" />

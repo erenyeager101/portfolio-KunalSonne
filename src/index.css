@@ -26,7 +26,7 @@ body {
 }
 
 .timeline-line {
-  @apply absolute left-4 top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-800;
+  @apply absolute left-4 top-0 bottom-0 w-1 rounded-full bg-gradient-to-b from-brand/40 via-slate-200 to-accent/40 dark:from-brand/60 dark:via-slate-800 dark:to-accent/60;
 }
 
 .scroll-mt-safe {

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import clsx from 'clsx';
 import Navbar from './components/Navbar';
+import ScrollProgress from './components/ScrollProgress';
 import HeroSection from './sections/HeroSection';
 import SkillsSection from './sections/SkillsSection';
 import ExperienceSection from './sections/ExperienceSection';
@@ -86,7 +87,8 @@ function App() {
         'min-h-screen bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100'
       )}
     >
-      <div className="relative overflow-hidden">
+  <ScrollProgress />
+  <div className="relative overflow-hidden">
         <div
           className="pointer-events-none absolute inset-0 -z-10 bg-grid-light bg-[size:32px_32px] opacity-80 dark:bg-grid-dark dark:opacity-60"
           aria-hidden="true"
@@ -103,14 +105,42 @@ function App() {
           resumeUrl={contact.resumeUrl}
         />
 
-        <main className="mx-auto flex max-w-6xl flex-col gap-24 px-4 pb-24 pt-32 sm:px-6 lg:gap-32 lg:px-8">
+        <main className="mx-auto flex max-w-6xl flex-col gap-28 px-4 pb-24 pt-32 sm:px-6 lg:gap-36 lg:px-8">
           <HeroSection data={hero} socialLinks={socialLinks} resumeUrl={contact.resumeUrl} />
-          <SkillsSection data={skills} />
-          <ExperienceSection items={experiences} />
-          <ProjectsSection items={projects} />
-          {highlights.length > 0 && <HighlightsSection items={highlights} />}
-          {research.length > 0 && <ResearchSection items={research} />}
-          <ContactSection contact={contact} />
+
+          <div className="relative">
+            <div className="absolute inset-x-0 -top-10 -bottom-16 -z-10 rounded-[3rem] bg-gradient-to-b from-white via-slate-50 to-transparent dark:from-slate-950 dark:via-slate-900/60" />
+            <SkillsSection data={skills} />
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-x-0 -top-12 -bottom-16 -z-10 rounded-[3rem] bg-gradient-to-b from-brand/5 via-transparent to-transparent dark:from-brand/10" />
+            <ExperienceSection items={experiences} />
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-x-0 -top-12 -bottom-16 -z-10 rounded-[3rem] bg-gradient-to-b from-accent/10 via-transparent to-transparent dark:from-accent/15" />
+            <ProjectsSection items={projects} />
+          </div>
+
+          {highlights.length > 0 && (
+            <div className="relative">
+              <div className="absolute inset-x-0 -top-12 -bottom-16 -z-10 rounded-[3rem] bg-gradient-to-b from-white via-slate-50 to-transparent dark:from-slate-950 dark:via-slate-900/60" />
+              <HighlightsSection items={highlights} />
+            </div>
+          )}
+
+          {research.length > 0 && (
+            <div className="relative">
+              <div className="absolute inset-x-0 -top-12 -bottom-16 -z-10 rounded-[3rem] bg-gradient-to-b from-brand/5 via-transparent to-transparent dark:from-brand/10" />
+              <ResearchSection items={research} />
+            </div>
+          )}
+
+          <div className="relative">
+            <div className="absolute inset-x-0 -top-12 -bottom-16 -z-10 rounded-[3rem] bg-gradient-to-b from-slate-100 via-white to-white dark:from-slate-900 dark:via-slate-950" />
+            <ContactSection contact={contact} />
+          </div>
         </main>
 
         <Footer socialLinks={socialLinks} />

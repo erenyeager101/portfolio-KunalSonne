@@ -25,7 +25,7 @@ module.exports = {
         }
       },
       boxShadow: {
-        'glow': '0 20px 45px -20px rgba(37, 99, 235, 0.45)'
+        glow: '0 28px 70px -28px rgba(37, 99, 235, 0.45)'
       },
       backgroundImage: {
         'grid-light': 'linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px)',
@@ -47,5 +47,5 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [require('@tailwindcss/forms')]
 };
