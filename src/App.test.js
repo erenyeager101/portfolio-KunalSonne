@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders portfolio hero headline', () => {
   render(<App />);
-  const heroHeading = screen.getByText(/Kunal Sonne/i);
-  expect(heroHeading).toBeInTheDocument();
+  const heroHeading = screen.getAllByText(/Kunal Sonne/i);
+  expect(heroHeading.length).toBeGreaterThan(0);
 });

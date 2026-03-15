@@ -14,16 +14,16 @@ function ProjectCard({ project, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, delay: index * 0.05, ease: 'easeOut' }}
-      whileHover={{ y: -14, rotateX: 1.5, rotateY: -1 }}
+      whileHover={{ y: -15, scale: 1.02, rotateX: 2, rotateY: -2, boxShadow: '0 20px 40px -10px rgba(37,99,235,0.2)' }}
       style={{ transformPerspective: 1000 }}
-      className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 shadow-lg transition-transform duration-300 dark:border-white/10 dark:bg-slate-950/80"
+      className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 shadow-lg transition-all duration-300 dark:border-white/10 dark:bg-slate-950/80"
     >
       <div className="relative overflow-hidden border-b border-slate-200/70 bg-gradient-to-br from-brand/20 via-transparent to-accent/20 p-6 dark:border-white/10 dark:from-brand/30 dark:to-accent/30">
         <motion.div
-          className="absolute inset-0 -z-10 opacity-50 blur-3xl"
+          className="absolute inset-0 -z-10 opacity-60 blur-3xl transition-opacity duration-300 group-hover:opacity-100"
           animate={{ backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'] }}
-          transition={{ duration: 14, repeat: Infinity, ease: 'linear' }}
-          style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(37,99,235,0.4), transparent 45%), radial-gradient(circle at 80% 30%, rgba(249,115,22,0.35), transparent 45%)' }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+          style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(37,99,235,0.5), transparent 50%), radial-gradient(circle at 80% 30%, rgba(249,115,22,0.4), transparent 50%)' }}
         />
         <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.35em] text-brand">
           {tags?.map((tag) => (

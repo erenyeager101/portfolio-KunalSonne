@@ -1,9 +1,19 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 import SectionHeading from '../components/SectionHeading.js';
 
 function SkillsSection({ data }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 50]);
+
   return (
-    <section id="skills" className="scroll-mt-safe">
+    <section id="skills" ref={ref} className="scroll-mt-safe">
       <div className="space-y-14">
         <SectionHeading
           eyebrow="Skills"
@@ -12,7 +22,7 @@ function SkillsSection({ data }) {
         />
 
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="space-y-6">
+          <motion.div className="space-y-6" style={{ y: y1 }}>
             {data?.categories?.slice(0, 3).map((category) => (
               <motion.div
                 key={category.title}
@@ -35,9 +45,10 @@ function SkillsSection({ data }) {
                 </ul>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           <motion.div
+            style={{ y: y2 }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
