@@ -1,7 +1,22 @@
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { getIconComponent } from '../utils/iconMap.js';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Stars } from '@react-three/drei';
+
+function StarScene() {
+  const ref = useRef();
+  useFrame((state, delta) => {
+    ref.current.rotation.x -= delta / 10;
+    ref.current.rotation.y -= delta / 15;
+  });
+  return (
+    <group rotation={[0, 0, Math.PI / 4]}>
+      <Stars ref={ref} radius={50} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+    </group>
+  );
+}
 
 function HeroSection({ data, socialLinks = [], resumeUrl }) {
   const Icon = getIconComponent('FileDown');
@@ -31,8 +46,14 @@ function HeroSection({ data, socialLinks = [], resumeUrl }) {
   const spotlight = useMotionTemplate`radial-gradient(650px circle at ${pointerX}px ${pointerY}px, rgba(37, 99, 235, 0.18), transparent 60%)`;
 
   return (
-    <section id="about" className="scroll-mt-safe">
-      <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/95 p-8 shadow-glow backdrop-blur dark:border-white/10 dark:bg-slate-950/85 sm:p-12">
+    <section id="about" className="scroll-mt-safe relative">
+      <div className="absolute inset-0 -z-40 h-[120%] w-full overflow-hidden opacity-30 dark:opacity-40">
+        <Canvas camera={{ position: [0, 0, 1] }}>
+          <StarScene />
+        </Canvas>
+      </div>
+
+      <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 p-8 shadow-glow backdrop-blur dark:border-white/10 dark:bg-slate-950/80 sm:p-12">
         <motion.div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 -z-20"
@@ -40,24 +61,18 @@ function HeroSection({ data, socialLinks = [], resumeUrl }) {
         />
         <motion.div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -z-30 bg-gradient-to-br from-brand/30 via-transparent to-accent/30 opacity-80 blur-3xl"
-          animate={{ opacity: [0.6, 0.85, 0.6] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-24 -left-24 -z-10 h-56 w-56 rounded-full bg-brand/25 blur-[120px]"
+          className="pointer-events-none absolute -top-24 -left-24 -z-10 h-56 w-56 rounded-full bg-brand/20 blur-[120px]"
           animate={{ y: [0, -10, 0], x: [0, 12, 0] }}
           transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-28 -right-32 -z-10 h-72 w-72 rounded-full bg-accent/20 blur-[140px]"
+          className="pointer-events-none absolute -bottom-28 -right-32 -z-10 h-72 w-72 rounded-full bg-accent/15 blur-[140px]"
           animate={{ y: [0, 18, 0], x: [0, -14, 0] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
         />
 
-        <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-center relative z-10">
           <div className="space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 32 }}

@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useMemo, useState, useRef } from 'react';
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading.js';
 import ProjectCard from '../components/ProjectCard.js';
 
@@ -19,10 +19,18 @@ function ProjectsSection({ items = [] }) {
     return items.filter((project) => project.tags?.includes(activeFilter));
   }, [items, activeFilter]);
 
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
+
   if (!items.length) return null;
 
   return (
-    <section id="projects" className="scroll-mt-safe">
+    <section id="projects" ref={ref} className="scroll-mt-safe">
       <div className="space-y-12">
         <SectionHeading
           eyebrow="Projects"
@@ -52,7 +60,7 @@ function ProjectsSection({ items = [] }) {
           })}
         </div>
 
-        <motion.div layout className="grid gap-6 md:grid-cols-2">
+        <motion.div layout style={{ y }} className="grid gap-6 md:grid-cols-2">
           <AnimatePresence>
             {filteredProjects.map((project, index) => (
               <motion.div
